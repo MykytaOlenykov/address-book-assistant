@@ -18,6 +18,7 @@ def placeholder():
 
 def main():
     book = AddressBook()
+    book.read_from_file(CONTACTS_FILENAME)
     print("Welcome to the assistant bot!")
 
     while True:
@@ -26,7 +27,8 @@ def main():
             command, *args = parse_input(user_input)
 
             if command in ["close", "exit"]:
-                print(placeholder())
+                book.save_to_file(CONTACTS_FILENAME)
+                print("Good bye!")
                 break
             elif command == "help":
                 print(placeholder())
@@ -35,14 +37,13 @@ def main():
 
             # contacts
             elif command == "all":
-                # print(AddressesCtrl.show_all())
-                print(placeholder())
+                print(ContactsCtrl.show_all(book))
             elif command == "add-contact":
-                print(placeholder())
+                print(ContactsCtrl.add_contact(args, book))
             elif command == "change-contact":
-                print(placeholder())
+                print(ContactsCtrl.change_contact(args, book))
             elif command == "delete-contact":
-                print(placeholder())
+                print(ContactsCtrl.delete_contact(args, book))
 
             # phone
             elif command == "find-phone":
@@ -93,9 +94,12 @@ def main():
                 print(placeholder())
             else:
                 print("Invalid command.")
-        except:
-            print("Something went wrong.")
-            break
+        except KeyboardInterrupt:
+            print("\nInvalid command.")
+        # except:
+        #     book.save_to_file(CONTACTS_FILENAME)
+        #     print("Something went wrong.")
+        #     break
 
 
 if __name__ == "__main__":

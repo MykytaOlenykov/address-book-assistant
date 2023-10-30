@@ -3,6 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+bot_assistant/db/*.bin
+
 # C extensions
 *.so
 
