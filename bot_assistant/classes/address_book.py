@@ -12,6 +12,12 @@ class AddressBook(UserDict):
     def __str__(self):
         return "".join([f"{record}\n" for record in self.data.values()]).rstrip("\n")
 
+    def find_record(self, name):
+        if not name in self.data:
+            raise RecordNotFound(name)
+        else:
+            return self.data[name]
+
     def add_record(self, record):
         name = record.name.value
 
@@ -20,11 +26,11 @@ class AddressBook(UserDict):
         else:
             self.data[name] = record
 
-    def find_record(self, name):
+    def delete(self, name):
         if not name in self.data:
             raise RecordNotFound(name)
         else:
-            return self.data[name]
+            self.data.pop(name)
 
     def save_to_file(self, filename):
         with open(self.__PATH_CONTACTS_DB / filename, "wb") as fh:

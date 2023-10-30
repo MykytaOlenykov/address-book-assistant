@@ -43,7 +43,7 @@ def main():
             elif command == "change-contact":
                 print(ContactsCtrl.change_contact(args, book))
             elif command == "delete-contact":
-                print(placeholder())
+                print(ContactsCtrl.delete_contact(args, book))
 
             # phone
             elif command == "find-phone":

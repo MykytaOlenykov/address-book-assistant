@@ -35,3 +35,12 @@ class ContactsCtrl:
         record = book.find_record(name)
         record.edit_phone(old_phone, new_phone)
         return "Contact updated."
+
+    @input_error
+    def delete_contact(args, book):
+        if len(args) != 1:
+            return "Give me name please."
+
+        name = args[0]
+        book.delete(name)
+        return "Contact deleted."
