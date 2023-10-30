@@ -30,3 +30,14 @@ class Record:
             self.phones.append(Phone(new_phone))
         else:
             raise PhoneConflict(self.name, new_phone)
+
+    def edit_phone(self, old_phone, new_phone):
+        new_phone = Phone(new_phone)
+        old_phone = self.find_phone(old_phone)
+
+        try:
+            self.find_phone(new_phone.value)
+        except PhoneNotFound:
+            old_phone.value = new_phone.value
+        else:
+            raise PhoneConflict(self.name.value, new_phone.value)

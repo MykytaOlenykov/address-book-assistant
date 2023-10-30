@@ -41,7 +41,7 @@ def main():
             elif command == "add-contact":
                 print(ContactsCtrl.add_contact(args, book))
             elif command == "change-contact":
-                print(placeholder())
+                print(ContactsCtrl.change_contact(args, book))
             elif command == "delete-contact":
                 print(placeholder())
 
