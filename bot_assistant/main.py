@@ -1,5 +1,13 @@
 from bot_assistant.classes import AddressBook
 from bot_assistant.utils import parse_input
+from bot_assistant.controllers import (
+    AddressesCtrl,
+    BirthdaysCtrl,
+    ContactsCtrl,
+    EmailsCtrl,
+    NotesCtrl,
+    PhonesCtrl,
+)
 
 CONTACTS_FILENAME = "contacts.bin"
 
@@ -24,10 +32,11 @@ def main():
                 print(placeholder())
             elif command == "hello":
                 print("How can I help you?")
-            elif command == "all":
-                print(placeholder())
 
             # contacts
+            elif command == "all":
+                # print(AddressesCtrl.show_all())
+                print(placeholder())
             elif command == "add-contact":
                 print(placeholder())
             elif command == "change-contact":
