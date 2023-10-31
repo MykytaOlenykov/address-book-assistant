@@ -26,7 +26,7 @@ class AddressBook(UserDict):
         else:
             self.data[name] = record
 
-    def delete(self, name):
+    def delete_record(self, name):
         if not name in self.data:
             raise RecordNotFound(name)
         else:
