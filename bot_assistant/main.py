@@ -38,7 +38,7 @@ def main():
             # contacts
             elif command == "all":
                 print(ContactsCtrl.show_all(book))
-            elif command == "find-contact":
+            elif command == "show-contact":
                 print(ContactsCtrl.find_contact(args, book))
             elif command == "add-contact":
                 print(ContactsCtrl.add_contact(args, book))
@@ -48,10 +48,10 @@ def main():
                 print(ContactsCtrl.delete_contact(args, book))
 
             # phone
-            elif command == "find-phone":
-                print(placeholder())
+            elif command == "show-phone":
+                print(PhonesCtrl.find_phone(args, book))
             elif command == "remove-phone":
-                print(placeholder())
+                print(PhonesCtrl.remove_phone(args, book))
 
             # email
             elif command == "find-email":
