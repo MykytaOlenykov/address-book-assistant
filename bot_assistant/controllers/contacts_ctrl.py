@@ -50,5 +50,5 @@ class ContactsCtrl:
             return "Give me name please."
 
         name = args[0]
-        book.delete(name)
+        book.delete_record(name)
         return "Contact deleted."
