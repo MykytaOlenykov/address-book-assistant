@@ -38,6 +38,8 @@ def main():
             # contacts
             elif command == "all":
                 print(ContactsCtrl.show_all(book))
+            elif command == "find-contact":
+                print(ContactsCtrl.find_contact(args, book))
             elif command == "add-contact":
                 print(ContactsCtrl.add_contact(args, book))
             elif command == "change-contact":
