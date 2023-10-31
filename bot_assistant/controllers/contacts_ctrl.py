@@ -10,6 +10,14 @@ class ContactsCtrl:
         return book
 
     @input_error
+    def find_contact(args, book):
+        if len(args) != 1:
+            return "Give me name please."
+
+        name = args[0]
+        return book.find_record(name)
+
+    @input_error
     def add_contact(args, book):
         if len(args) != 2:
             return "Give me name and phone please."

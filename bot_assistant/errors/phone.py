@@ -1,7 +1,7 @@
 class InvalidPhone(Exception):
     def __init__(self, phone, *args):
         super().__init__(*args)
-        self.message = f"Phone {phone} is invalid. The phone number must be 10 numbers."
+        self.message = f"Phone {phone} is invalid. the phone number must be in the format (XXX)-XX-XXXX."
 
 
 class PhoneNotFound(Exception):

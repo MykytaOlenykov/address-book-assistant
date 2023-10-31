@@ -7,7 +7,7 @@ class Record:
     def __init__(self, name):
         self.name = Name(name)
         self.phones = []
-        self.email = None
+        self.email = []
         self.address = None
         self.birthday = None
         self.note = None
@@ -41,3 +41,11 @@ class Record:
             old_phone.value = new_phone.value
         else:
             raise PhoneConflict(self.name.value, new_phone.value)
+
+    def remove_phone(self, phone):
+        filtered_phone = list(filter(lambda p: p.value != phone, self.phones))
+
+        if len(filtered_phone) == len(self.phones):
+            raise PhoneNotFound(self.name, phone)
+        else:
+            self.phones = filtered_phone
