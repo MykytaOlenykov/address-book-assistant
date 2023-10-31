@@ -1,5 +1,4 @@
-from bot_assistant.classes import Name
-from bot_assistant.classes import Phone
+from bot_assistant.classes import Email, Name, Phone
 from bot_assistant.errors import PhoneNotFound, PhoneConflict
 
 
@@ -49,3 +48,12 @@ class Record:
             raise PhoneNotFound(self.name, phone)
         else:
             self.phones = filtered_phone
+
+    # email
+    def add_email(self, email_data):
+        """Adds an email address"""
+        self.emails.append(Email(email_data))
+
+    def del_email(self):
+        """Deletes an email address"""
+        self.emails = []
