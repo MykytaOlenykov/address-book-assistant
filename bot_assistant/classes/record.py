@@ -1,4 +1,4 @@
-from bot_assistant.classes import Email, Name, Phone, Address
+from bot_assistant.classes import Email, Name, Phone, Address, Note
 from bot_assistant.errors import (
     PhoneNotFound,
     PhoneConflict,
@@ -96,3 +96,10 @@ class Record:
 
     def remove_address(self):
         self.address = None
+
+    # note
+    def add_note(self, note):
+        self.note = Note(note)
+
+    def delete_note(self):
+        self.note = None
