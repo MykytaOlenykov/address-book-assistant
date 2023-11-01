@@ -64,14 +64,14 @@ def main():
                 print(EmailsCtrl.remove_email(args, book))
 
             # address
-            elif command == "find-address":
-                print(placeholder())
+            elif command == "show-address":
+                print(AddressesCtrl.find_address(args, book))
             elif command == "add-address":
-                print(placeholder())
+                print(AddressesCtrl.add_address(args, book))
             elif command == "change-address":
-                print(placeholder())
+                print(AddressesCtrl.change_address(args, book))
             elif command == "remove-address":
-                print(placeholder())
+                print(AddressesCtrl.remove_address(args, book))
 
             # note
             elif command == "add-note":

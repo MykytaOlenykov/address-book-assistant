@@ -1,10 +1,9 @@
-from bot_assistant.classes import Email, Name, Phone
+from bot_assistant.classes import Email, Name, Phone, Address
 from bot_assistant.errors import (
     PhoneNotFound,
     PhoneConflict,
     EmailNotFound,
     EmailConflict,
-    InvalidEmail,
 )
 
 
@@ -87,3 +86,13 @@ class Record:
             old_email.value = new_email.value
         else:
             raise EmailConflict(self.name.value, new_email.value)
+
+    # address
+    def add_address(self, address):
+        self.address = Address(address)
+
+    def change_address(self, address):
+        self.address = Address(address)
+
+    def remove_address(self):
+        self.address = None
