@@ -1,5 +1,5 @@
-from bot_assistant.classes import Email, Name, Phone
-from bot_assistant.errors import PhoneNotFound, PhoneConflict
+from bot_assistant.classes import Email, Name, Phone, Address
+from bot_assistant.errors import PhoneNotFound, PhoneConflict, InvalidAddress
 
 
 class Record:
@@ -7,7 +7,7 @@ class Record:
         self.name = Name(name)
         self.phones = []
         self.emails = []
-        self.address = None
+        self.address = ""
         self.birthday = None
         self.note = None
 
@@ -57,3 +57,13 @@ class Record:
     def del_email(self):
         """Deletes an email address"""
         self.emails = []
+
+    # address
+    def add_address(self, address):
+        self.address = Address(address)
+
+    def change_address(self, address):
+        self.address = Address(address)
+
+    def remove_address(self):
+        self.address = ""
