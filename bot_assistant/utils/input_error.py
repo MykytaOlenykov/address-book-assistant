@@ -5,6 +5,9 @@ from bot_assistant.errors import (
     PhoneConflict,
     RecordNotFound,
     RecordConflict,
+    InvalidEmail,
+    EmailNotFound,
+    EmailConflict,
 )
 
 
@@ -19,6 +22,12 @@ def input_error(func):
         except PhoneNotFound as error:
             return error.message
         except PhoneConflict as error:
+            return error.message
+        except InvalidEmail as error:
+            return error.message
+        except EmailNotFound as error:
+            return error.message
+        except EmailConflict as error:
             return error.message
         except RecordNotFound as error:
             return error.message
