@@ -54,14 +54,14 @@ def main():
                 print(PhonesCtrl.remove_phone(args, book))
 
             # email
-            elif command == "find-email":
-                print(placeholder())
+            elif command == "show-email":
+                print(EmailsCtrl.find_email(args, book))
             elif command == "add-email":
-                print(placeholder())
+                print(EmailsCtrl.add_email(args, book))
             elif command == "change-email":
-                print(placeholder())
+                print(EmailsCtrl.change_email(args, book))
             elif command == "remove-email":
-                print(placeholder())
+                print(EmailsCtrl.remove_email(args, book))
 
             # address
             elif command == "find-address":

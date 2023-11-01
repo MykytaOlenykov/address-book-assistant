@@ -64,21 +64,21 @@ class Record:
         else:
             raise EmailConflict(self.name, new_email)
 
-    def del_email(self, email):
-        filtered_email = list(filter(lambda p: p.value != email, self.emails))
+    def remove_email(self, email):
+        filtered_email = list(filter(lambda e: e.value != email, self.emails))
         if len(filtered_email) == len(self.emails):
             raise EmailNotFound(self.name, email)
         else:
             self.emails = filtered_email
 
     def find_email(self, email):
-        for email in self.emails:
-            if email.value == email:
-                return email
+        for e in self.emails:
+            if e.value == email:
+                return e
 
         raise EmailNotFound(self.name, email)
 
-    def change_email(self, old_email, new_email):
+    def edit_email(self, old_email, new_email):
         new_email = Email(new_email)
         old_email = self.find_email(old_email)
         try:
