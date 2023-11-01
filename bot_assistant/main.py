@@ -74,12 +74,12 @@ def main():
                 print(AddressesCtrl.remove_address(args, book))
 
             # note
+            elif command == "show-note":
+                print(NotesCtrl.find_note_by_name(args, book))
             elif command == "add-note":
-                print(placeholder())
-            elif command == "find-note":
-                print(placeholder())
-            elif command == "clear-note":
-                print(placeholder())
+                print(NotesCtrl.add_note(args, book))
+            elif command == "delete-note":
+                print(NotesCtrl.delete_note(args, book))
             elif command == "add-tags":
                 print(placeholder())
             elif command == "change-tag":
