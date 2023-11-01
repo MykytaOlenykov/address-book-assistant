@@ -1,5 +1,10 @@
 from bot_assistant.classes import Email, Name, Phone, Address
-from bot_assistant.errors import PhoneNotFound, PhoneConflict, InvalidAddress
+from bot_assistant.errors import (
+    PhoneNotFound,
+    PhoneConflict,
+    EmailNotFound,
+    EmailConflict,
+)
 
 
 class Record:
@@ -7,7 +12,7 @@ class Record:
         self.name = Name(name)
         self.phones = []
         self.emails = []
-        self.address = ""
+        self.address = None
         self.birthday = None
         self.note = None
 
@@ -50,13 +55,37 @@ class Record:
             self.phones = filtered_phone
 
     # email
-    def add_email(self, email_data):
-        """Adds an email address"""
-        self.emails.append(Email(email_data))
+    def add_email(self, new_email):
+        try:
+            self.find_email(new_email)
+        except EmailNotFound:
+            self.emails.append(Email(new_email))
+        else:
+            raise EmailConflict(self.name, new_email)
 
-    def del_email(self):
-        """Deletes an email address"""
-        self.emails = []
+    def remove_email(self, email):
+        filtered_email = list(filter(lambda e: e.value != email, self.emails))
+        if len(filtered_email) == len(self.emails):
+            raise EmailNotFound(self.name, email)
+        else:
+            self.emails = filtered_email
+
+    def find_email(self, email):
+        for e in self.emails:
+            if e.value == email:
+                return e
+
+        raise EmailNotFound(self.name, email)
+
+    def edit_email(self, old_email, new_email):
+        new_email = Email(new_email)
+        old_email = self.find_email(old_email)
+        try:
+            self.find_email(new_email.value)
+        except EmailNotFound:
+            old_email.value = new_email.value
+        else:
+            raise EmailConflict(self.name.value, new_email.value)
 
     # address
     def add_address(self, address):
@@ -66,4 +95,4 @@ class Record:
         self.address = Address(address)
 
     def remove_address(self):
-        self.address = ""
+        self.address = None
