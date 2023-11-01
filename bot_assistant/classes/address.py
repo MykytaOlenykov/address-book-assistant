@@ -1,12 +1,8 @@
-import re
-
 from bot_assistant.classes import Field
 from bot_assistant.errors import InvalidAddress
 
 
 class Address(Field):
-    ADDRESS_FORMAT = r"[A-Za-z0-9'\.\-\s\,]"
-
     def __init__(self, value):
         self.address_validation(value)
         super().__init__(value)
@@ -17,5 +13,5 @@ class Address(Field):
         self.value = new_value
 
     def address_validation(self, address):
-        if not re.fullmatch(self.ADDRESS_FORMAT, address):
+        if len(address) <= 5 or len(address) >= 100:
             raise InvalidAddress(address)

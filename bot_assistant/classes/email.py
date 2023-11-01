@@ -1,4 +1,5 @@
 import re
+
 from bot_assistant.classes import Field
 from bot_assistant.errors import InvalidEmail
 
