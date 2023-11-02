@@ -4,17 +4,23 @@ from bot_assistant.utils import input_error
 class BirthdaysCtrl:
     @input_error
     def add_birthday(args, book):
+        if len(args) != 2:
+            return "Give me name and birthday please."
+
         name = args[0]
         birthday = args[1]
         contact = book.find_record(name)
         if contact:
             contact.add_birthday(birthday)
-            return "Birthday added"
+            return "Birthday added."
         else:
             return f"Contact: {name} not found!"
 
     @input_error
     def show_birthday(args, book):
+        if len(args) != 1:
+            return "Give me name please."
+
         name = args[0]
         contact = book.find_record(name)
         if contact and contact.birthday:

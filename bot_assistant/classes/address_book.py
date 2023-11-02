@@ -10,7 +10,10 @@ class AddressBook(UserDict):
     __PATH_CONTACTS_DB = Path(__file__).parent / ".." / "db"
 
     def __str__(self):
-        return "".join([f"{record}\n" for record in self.data.values()]).rstrip("\n")
+        s = f"\n\n{'|'*42}\n\n"
+        return "".join([f"{record}{s}" for record in self.data.values()]).removesuffix(
+            s
+        )
 
     def find_record(self, name):
         if not name in self.data:
