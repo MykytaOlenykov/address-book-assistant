@@ -54,12 +54,12 @@ class Record:
             raise PhoneConflict(self.name.value, new_phone.value)
 
     def remove_phone(self, phone):
-        filtered_phone = list(filter(lambda p: p.value != phone, self.phones))
+        filtered_phones = list(filter(lambda p: p.value != phone, self.phones))
 
-        if len(filtered_phone) == len(self.phones):
+        if len(filtered_phones) == len(self.phones):
             raise PhoneNotFound(self.name, phone)
         else:
-            self.phones = filtered_phone
+            self.phones = filtered_phones
 
     # email
     def add_email(self, new_email):
@@ -71,11 +71,11 @@ class Record:
             raise EmailConflict(self.name, new_email)
 
     def remove_email(self, email):
-        filtered_email = list(filter(lambda e: e.value != email, self.emails))
-        if len(filtered_email) == len(self.emails):
+        filtered_emails = list(filter(lambda e: e.value != email, self.emails))
+        if len(filtered_emails) == len(self.emails):
             raise EmailNotFound(self.name, email)
         else:
-            self.emails = filtered_email
+            self.emails = filtered_emails
 
     def find_email(self, email):
         for e in self.emails:

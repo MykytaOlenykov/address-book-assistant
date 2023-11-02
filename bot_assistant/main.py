@@ -76,16 +76,18 @@ def main():
             # note
             elif command == "show-note":
                 print(NotesCtrl.find_note_by_name(args, book))
+            elif command == "find-notes":
+                print(placeholder())
             elif command == "add-note":
                 print(NotesCtrl.add_note(args, book))
             elif command == "delete-note":
                 print(NotesCtrl.delete_note(args, book))
             elif command == "add-tags":
-                print(placeholder())
+                print(NotesCtrl.add_tags(args, book))
             elif command == "change-tag":
-                print(placeholder())
+                print(NotesCtrl.change_tag(args, book))
             elif command == "remove-tags":
-                print(placeholder())
+                print(NotesCtrl.remove_tags(args, book))
 
             # birthdays
             elif command == "birthdays":
