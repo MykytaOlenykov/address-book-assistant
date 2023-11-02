@@ -91,11 +91,11 @@ def main():
 
             # birthdays
             elif command == "birthdays":
-                print(placeholder())
+                print(BirthdaysCtrl.birthdays(book))
             elif command == "add-birthday":
-                print(placeholder())
+                print(BirthdaysCtrl.add_birthday(args, book))
             elif command == "show-birthday":
-                print(placeholder())
+                print(BirthdaysCtrl.show_birthday(args, book))
             else:
                 print("Invalid command.")
         except KeyboardInterrupt:
