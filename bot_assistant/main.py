@@ -77,7 +77,7 @@ def main():
             elif command == "show-note":
                 print(NotesCtrl.find_note_by_name(args, book))
             elif command == "find-notes":
-                print(placeholder())
+                print(NotesCtrl.find_notes_by_tags(args, book))
             elif command == "add-note":
                 print(NotesCtrl.add_note(args, book))
             elif command == "delete-note":

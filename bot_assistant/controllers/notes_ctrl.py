@@ -18,6 +18,27 @@ class NotesCtrl:
         return note
 
     @input_error
+    def find_notes_by_tags(args, book):
+        if len(args) < 1:
+            return "Give me tags please."
+
+        found_notes = []
+
+        for record_data in book.values():
+            note = record_data.note
+
+            for tag in args:
+                try:
+                    note.find_tag(tag)
+                except TagNotFound:
+                    continue
+                else:
+                    found_notes.append(str(note))
+                    break
+
+        return ("\n\n").join(found_notes)
+
+    @input_error
     def add_note(args, book):
         if len(args) < 2:
             return "Give me name and note please."
