@@ -1,4 +1,11 @@
-from bot_assistant.classes import Email, Name, Phone, Address, Note
+from bot_assistant.classes import (
+    Email,
+    Name,
+    Phone,
+    Address,
+    Note,
+    Birthday,
+)
 from bot_assistant.errors import (
     PhoneNotFound,
     PhoneConflict,
@@ -103,3 +110,8 @@ class Record:
 
     def delete_note(self):
         self.note = None
+
+    # birthday
+    def add_birthday(self, birthday):
+        self.birthday = Birthday(birthday)
+        return "Birthday added"
