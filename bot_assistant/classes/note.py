@@ -9,16 +9,8 @@ class Note(Field):
         self.tags = []
 
     def __str__(self):
-        table = create_table_header("Tags")
-
-        if not self.tags:
-            table_body = create_table_row("Empty")
-            return f"{table}{table_body}\n\nNote: {self.value}"
-
-        for tag in self.tags:
-            table += create_table_row(tag.value) + "\n"
-
-        return f"{table}\nNote: {self.value}"
+        tags = f"Tags: {', '.join(t.value for t in self.tags)}"
+        return f"{tags}\nNote: {self.value}"
 
     def find_tag(self, tag):
         for t in self.tags:

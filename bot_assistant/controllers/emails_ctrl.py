@@ -11,7 +11,7 @@ class EmailsCtrl:
         record = book.find_record(name)
         emails = record.emails
 
-        table = create_table_header(name)
+        table = create_table_header("Emails")
 
         if not emails:
             return table + create_table_row("Empty")

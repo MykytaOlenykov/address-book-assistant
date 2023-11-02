@@ -3,7 +3,7 @@ class Field:
         self._value = value
 
     def __str__(self):
-        return str(self.value)
+        return str(self._value)
 
     @property
     def value(self):
