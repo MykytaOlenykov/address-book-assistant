@@ -9,6 +9,48 @@ from bot_assistant.controllers import (
     PhonesCtrl,
 )
 
+
+def help():
+    return (
+        "Main commands\n"
+        "hello            |  greeting\n"
+        "exit             |  exit the program\n"
+        "close            |  exit the program\n"
+        "help             |  show help information\n"
+        "-----------------contacts --------------------------\n"
+        "add-contact      |  add a contact and phone(s) number\n"
+        "change-contact   |  change a contact\n"
+        "show-contact     |  show a contact\n"
+        "all              |  contacts with phones and birthdays\n"
+        "delete-contact   |  delete contact/contact number\n"
+        "-----------------phone number------------------------\n"
+        "show-phone       |  show phone of a contact\n"
+        "remove-phone     |  remove phone of a contact\n"
+        "-----------------email address-----------------------\n"
+        "add-email        |  add email to a contact\n"
+        "show-email       |  show email of a contact\n"
+        "change-email     |  change email in a contact\n"
+        "remove-email     |  remove email of a contact\n"
+        "-----------------address-----------------------------\n"
+        "add-address      |  add address to a contact\n"
+        "show-address     |  show address of a contact\n"
+        "change-address   |  change address of a contact \n"
+        "remove-address   |  remove address of a contact \n"
+        "-----------------note--------------------------------\n"
+        "add-note         |  add a note\n"
+        "find-note        |  find a note\n"
+        "show-note        |  show a note\n"
+        "delete-note      |  delete a note\n"
+        "add-tags         |  add tags to a note\n"
+        "change-tag       |  change a tag of a note\n"
+        "remove-tags      |  remove tags of a note\n"
+        "-----------------birthday-----------------------------\n"
+        "add-birthday     |  add birthday of a contact \n"
+        "birthdays        |  show birthdays for next 7 days\n"
+        "remove-birthday  |  remove birthday of acontact \n"
+    )
+
+
 CONTACTS_FILENAME = "contacts.bin"
 
 
@@ -31,7 +73,7 @@ def main():
                 print("Good bye!")
                 break
             elif command == "help":
-                print(placeholder())
+                print(help())
             elif command == "hello":
                 print("How can I help you?")
 
