@@ -1,3 +1,4 @@
+from bot_assistant.utils import create_table_header, create_table_row
 from bot_assistant.classes import (
     Email,
     Name,
@@ -24,7 +25,42 @@ class Record:
         self.note = None
 
     def __str__(self):
-        return f"Contact name: {self.name.value}, phones: {'; '.join(p.value for p in self.phones)}"
+        empty_field = "-\n\n"
+        empty_row = create_table_row("Empty")
+        info = f"Name: {self.name.value}\n\n"
+
+        info += f"Address: "
+        if self.address:
+            info += f"{self.address.value}\n\n"
+        else:
+            info += empty_field
+
+        info += f"Birthday: "
+        if self.birthday:
+            info += f"{self.birthday.value}\n\n"
+        else:
+            info += empty_field
+
+        if self.note:
+            info += f"{self.note}\n\n"
+        else:
+            info += f"Note: {empty_field}"
+
+        info += create_table_header("Phones")
+        if not self.phones:
+            info += empty_row + "\n"
+        else:
+            for phone in self.phones:
+                info += create_table_row(phone.value) + "\n"
+
+        info += "\n" + create_table_header("Emails")
+        if not self.emails:
+            info += empty_row + "\n"
+        else:
+            for email in self.emails:
+                info += create_table_row(email.value) + "\n"
+
+        return info.removesuffix("\n")
 
     # phone
     def find_phone(self, phone):
