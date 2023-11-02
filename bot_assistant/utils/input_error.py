@@ -8,6 +8,10 @@ from bot_assistant.errors import (
     InvalidEmail,
     EmailNotFound,
     EmailConflict,
+    InvalidAddress,
+    InvalidTag,
+    TagNotFound,
+    TagConflict,
 )
 
 
@@ -28,6 +32,14 @@ def input_error(func):
         except EmailNotFound as error:
             return error.message
         except EmailConflict as error:
+            return error.message
+        except InvalidAddress as error:
+            return error.message
+        except InvalidTag as error:
+            return error.message
+        except TagNotFound as error:
+            return error.message
+        except TagConflict as error:
             return error.message
         except RecordNotFound as error:
             return error.message

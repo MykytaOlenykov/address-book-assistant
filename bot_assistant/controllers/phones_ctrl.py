@@ -11,7 +11,7 @@ class PhonesCtrl:
         record = book.find_record(name)
         phones = record.phones
 
-        table = create_table_header(name)
+        table = create_table_header("Phones")
 
         if not phones:
             return table + create_table_row("Empty")

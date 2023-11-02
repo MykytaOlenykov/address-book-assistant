@@ -17,5 +17,5 @@ class Phone(Field):
         self._value = new_value
 
     def phone_validation(self, phone):
-        if not re.fullmatch(self.PHONE_FORMAT, str(phone)):
+        if not re.fullmatch(self.PHONE_FORMAT, phone):
             raise InvalidPhone(phone)
