@@ -1,7 +1,7 @@
 from setuptools import setup, find_namespace_packages
 
 setup(
-    name="address-book-assistant",
+    name="bot-assistant",
     version="1",
     description="Very useful code",
     url="https://github.com/MykytaOlenykov/address-book-assistant",
