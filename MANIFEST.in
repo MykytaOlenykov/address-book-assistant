@@ -1,2 +1,3 @@
-include README.md
+include bot_assistant/README.md
+include bot_assistant/LICENSE
 include bot_assistant/db/*
