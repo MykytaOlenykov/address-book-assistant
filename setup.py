@@ -8,6 +8,7 @@ setup(
     author="SITE",
     license="MIT",
     packages=find_namespace_packages(),
+    install_requires=["prompt_toolkit"],
     entry_points={"console_scripts": ["bot-assistat = bot_assistant.main:main"]},
     include_package_data=True,
 )
