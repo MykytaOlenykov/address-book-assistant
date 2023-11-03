@@ -13,7 +13,9 @@
 ### Install as a package
 
 `python3 -m venv .env`
+
 `source .env/bin/activate`
+
 `pip install .`
 
 ### Launch app: enter the keyword into the terminal
