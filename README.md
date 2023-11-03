@@ -4,7 +4,7 @@
 
 ### Clone a repository
 
-```https://github.com/MykytaOlenykov/address-book-assistant.git``` 
+```git clone https://github.com/MykytaOlenykov/address-book-assistant```
 
 ### Change directory to project folder
 
@@ -12,6 +12,8 @@
 
 ### Install as a package
 
+```python3 -m venv .env```
+```source .env/bin/activate```
 ```pip install -e .```
 
 ### Launch app: enter the keyword into the terminal
