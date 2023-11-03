@@ -4,21 +4,21 @@
 
 ### Clone a repository
 
-```git clone https://github.com/MykytaOlenykov/address-book-assistant```
+`git clone https://github.com/MykytaOlenykov/address-book-assistant-MCS3-team1`
 
 ### Change directory to project folder
 
-```cd address-book-assistant```
+`cd address-book-assistant`
 
 ### Install as a package
 
-```python3 -m venv .env```
-```source .env/bin/activate```
-```pip install -e .```
+`python3 -m venv .env`
+`source .env/bin/activate`
+`pip install .`
 
 ### Launch app: enter the keyword into the terminal
 
-```bot-assistant```
+`bot-assistant`
 
 ### Below is a list of possible commands
 
@@ -36,9 +36,9 @@ help ...........| show help information,
 
 add-contact ....| add a contact and phone(s) number,
 
-change-contact .| change a contact, 
+change-contact .| change a contact,
 
- show-contact ..| show a contact,
+show-contact ..| show a contact,
 
 all ............| contacts with phones and birthdays,
 
@@ -94,8 +94,8 @@ birthdays ......| show birthdays for next 7 days,
 
 remove-birthday | remove birthday of acontact
 
-
 ### General information
 
 #### The assistant bot has 2 main functions: creating contacts and notes.
+
 #### Using the bot, the user can create, save, edit and delete names, phone numbers, dates of birth, emails and notes.

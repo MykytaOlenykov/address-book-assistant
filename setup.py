@@ -4,7 +4,7 @@ setup(
     name="bot-assistant",
     version="1",
     description="Very useful code",
-    url="https://github.com/MykytaOlenykov/address-book-assistant",
+    url="https://github.com/MykytaOlenykov/address-book-assistant-MCS3-team1",
     author="SITE",
     license="MIT",
     packages=find_namespace_packages(),

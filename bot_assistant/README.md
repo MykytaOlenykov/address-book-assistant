@@ -4,7 +4,7 @@
 
 ### Clone a repository
 
-`git clone https://github.com/MykytaOlenykov/address-book-assistant`
+`git clone https://github.com/MykytaOlenykov/address-book-assistant-MCS3-team1`
 
 ### Change directory to project folder
 
