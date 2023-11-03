@@ -1,2 +1,2 @@
 include README.md
-include bot_assistant/db
+include bot_assistant/db/*
