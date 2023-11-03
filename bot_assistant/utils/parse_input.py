@@ -1,7 +1,6 @@
 from prompt_toolkit.lexers import Lexer
 from prompt_toolkit.styles.named_colors import NAMED_COLORS
 from prompt_toolkit.completion import NestedCompleter
-from prompt_toolkit import prompt
 
 
 def parse_input(user_input):

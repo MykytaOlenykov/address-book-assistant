@@ -1,5 +1,7 @@
+from prompt_toolkit import prompt
+
 from bot_assistant.classes import AddressBook
-from bot_assistant.utils import parse_input, RainbowLexer, Completer, prompt
+from bot_assistant.utils import parse_input, RainbowLexer, Completer
 from bot_assistant.controllers import (
     AddressesCtrl,
     BirthdaysCtrl,
@@ -47,7 +49,7 @@ def help():
         "-----------------birthday-----------------------------\n"
         "add-birthday     |  add birthday of a contact \n"
         "birthdays        |  show birthdays for next 7 days\n"
-        "remove-birthday  |  remove birthday of acontact \n"
+        "show-birthday    |  show birthday of a contact \n"
     )
 
 
@@ -66,7 +68,7 @@ def main():
     while True:
         try:
             user_input = prompt(
-                ">>> Enter a command: ", Completer=Completer, lexer=RainbowLexer()
+                ">>> Enter a command: ", completer=Completer, lexer=RainbowLexer()
             )
             command, *args = parse_input(user_input)
 
