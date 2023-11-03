@@ -1,4 +1,4 @@
-# MCS3-team1-bot_assistance
+# address-book-assistant-MCS3-team1
 
 ## Installation instructions
 
