@@ -14,7 +14,7 @@ from bot_assistant.controllers import (
 
 def help():
     return (
-        "Main commands\n"
+        "----------------Main commands----------------------\n"
         "hello            |  greeting\n"
         "exit             |  exit the program\n"
         "close            |  exit the program\n"

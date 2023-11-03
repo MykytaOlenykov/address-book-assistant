@@ -1,4 +1,24 @@
-# address-book-assistant
+# MCS3-team1-bot_assistance
+
+## Installation instructions
+
+### Clone a repository
+
+```https://github.com/MykytaOlenykov/address-book-assistant.git``` 
+
+### Change directory to project folder
+
+```cd address-book-assistant```
+
+### Install as a package
+
+```pip install -e .```
+
+### Launch app: enter the keyword into the terminal
+
+```bot-assistant```
+
+### Below is a list of possible commands
 
 -----------------Main commands---------------------
 hello ..........| greeting,
@@ -36,3 +56,9 @@ remove-tags ....| remove tags of a note,
 add-birthday ...| add contact birthday,
 birthdays ......| show birthdays for next 7 days,
 remove-birthday | remove birthday of acontact,
+
+
+### General information
+
+#### The assistant bot has 2 main functions: creating contacts and notes.
+#### Using the bot, the user can create, save, edit and delete names, phone numbers, dates of birth, emails and notes.
