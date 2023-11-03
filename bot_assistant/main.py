@@ -108,10 +108,10 @@ def main():
                 print("Invalid command.")
         except KeyboardInterrupt:
             print("\nInvalid command.")
-        # except:
-        #     book.save_to_file(CONTACTS_FILENAME)
-        #     print("Something went wrong.")
-        #     break
+        except:
+            book.save_to_file(CONTACTS_FILENAME)
+            print("Something went wrong.")
+            break
 
 
 if __name__ == "__main__":
