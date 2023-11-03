@@ -1,5 +1,5 @@
 from bot_assistant.classes import AddressBook
-from bot_assistant.utils import parse_input
+from bot_assistant.utils import parse_input, RainbowLexer, Completer, prompt
 from bot_assistant.controllers import (
     AddressesCtrl,
     BirthdaysCtrl,
@@ -65,7 +65,9 @@ def main():
 
     while True:
         try:
-            user_input = input(">>> Enter a command: ")
+            user_input = prompt(
+                ">>> Enter a command: ", Completer=Completer, lexer=RainbowLexer()
+            )
             command, *args = parse_input(user_input)
 
             if command in ["close", "exit"]:
