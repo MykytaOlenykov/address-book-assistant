@@ -54,10 +54,6 @@ def help():
 CONTACTS_FILENAME = "contacts.bin"
 
 
-def placeholder():
-    return "This command is under development"
-
-
 def main():
     book = AddressBook()
     book.read_from_file(CONTACTS_FILENAME)
