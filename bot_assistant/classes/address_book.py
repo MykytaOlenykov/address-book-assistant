@@ -7,7 +7,7 @@ from bot_assistant.errors import RecordNotFound, RecordConflict
 
 
 class AddressBook(UserDict):
-    __PATH_CONTACTS_DB = Path(__file__).parent / ".." / "db"
+    __PATH_CONTACTS_DB = Path(__file__).parent.parent / "db"
 
     def __str__(self):
         separator = f"\n\n{'|'*42}\n\n"
