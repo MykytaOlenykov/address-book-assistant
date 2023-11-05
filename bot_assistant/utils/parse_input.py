@@ -44,7 +44,7 @@ Completer = NestedCompleter.from_nested_dict(
         "change-address": None,
         "remove-address": None,
         "add-note": None,
-        "find-note": None,
+        "find-notes": None,
         "show-note": None,
         "delete-note": None,
         "add-tags": None,
