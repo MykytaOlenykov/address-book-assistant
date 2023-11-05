@@ -8,7 +8,7 @@
 
 ### Change directory to project folder
 
-`cd address-book-assistant`
+`cd address-book-assistant-MCS3-team1`
 
 ### Install as a package
 
@@ -24,77 +24,43 @@
 
 ### Below is a list of possible commands
 
------------------Main commands---------------------
-
-hello ..........| greeting,
-
-exit ...........| exit the program,
-
-close ..........| exit the program,
-
-help ...........| show help information,
-
-----------------contacts --------------------------
-
-add-contact ....| add a contact and phone number,
-
-change-contact .| change a contact,
-
-show-contact ...| show a contact,
-
-all ............| contacts with phones and birthdays,
-
-delete-contact .| delete contact/contact number,
-
-----------------phone number-----------------------
-
-show-phone .....| show phone of a contact,
-
-remove-phone ...| remove phone of a contact,
-
-----------------email address----------------------
-
-add-email ......| add email to a contact,
-
-show-email .....| show email of a contact,
-
-change-email ...| change email in a contact,
-
-remove-email ...| remove email of a contact,
-
-----------------address----------------------------
-
-add-address ....| add address to a contact,
-
-show-address ...| show address of a contact,
-
-change-address .| change address of contact,
-
-remove-address .| remove address of contact,
-
-----------------note-------------------------------
-
-add-note .......| add a note,
-
-find-note ......| find a note,
-
-show-note ......| show a note,
-
-delete-note ....| delete a note,
-
-add-tags .......| add tags to a note,
-
-change-tag .....| change a tag of a note,
-
-remove-tags ....| remove tags of a note,
-
-----------------birthday---------------------------
-
-add-birthday ...| add contact birthday,
-
-birthdays ......| show birthdays for next 7 days,
-
-show-birthday ..| show birthday of a contact
+COMMANDS:
+----------------------------------------main------------------------------------------------------------
+hello                                                   |  greeting
+exit                                                    |  exit the program
+close                                                   |  exit the program
+help                                                    |  show help information
+----------------------------------------contacts--------------------------------------------------------
+all                                                     |  contacts with phones and birthdays
+show-contact <name>                                     |  show a contact
+add-contact <name> <phone>                              |  add a contact and phone number (XXX)-XXX-XXXX
+change-contact <name> <old phone> <new phone>           |  change a contact
+delete-contact <name>                                   |  delete contact/contact number
+----------------------------------------phone number----------------------------------------------------
+show-phone <name>                                       |  show phone of a contact
+remove-phone <name> <phone>                             |  remove phone of a contact
+----------------------------------------email address---------------------------------------------------
+show-email <name>                                       |  show email of a contact
+add-email <name> <email>                                |  add email to a contact
+change-email <name> <old email> <new email>             |  change email in a contact
+remove-email <name> <email>                             |  remove email of a contact
+----------------------------------------address---------------------------------------------------------
+show-address <name>                                     |  show address of a contact
+add-address <name> <address>                            |  add address to a contact
+change-address <name> <old address> <new address>       |  change address of a contact 
+remove-address <name> <address>                         |  remove address of a contact 
+----------------------------------------note------------------------------------------------------------
+show-note <name>                                        |  show a note
+find-note <tags>                                        |  find a note
+add-note <name> <note>                                  |  add a note
+delete-note <name>                                      |  delete a note
+add-tags <name> <tags>                                  |  add tags to a note
+change-tag <name> <old tag> <new tag>                   |  change a tag of a note
+remove-tags <name> <tags>                               |  remove tags of a note
+----------------------------------------birthday--------------------------------------------------------
+birthdays                                               |  show birthdays for next 7 days
+show-birthday <name>                                    |  show birthday of a contact 
+add-birthday <name> <birthday>                          |  add birthday of a contact 
 
 ### General information
 
