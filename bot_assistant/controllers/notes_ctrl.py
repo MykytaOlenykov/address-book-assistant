@@ -27,6 +27,9 @@ class NotesCtrl:
         for record_data in book.values():
             note = record_data.note
 
+            if not note:
+                continue
+
             for tag in args:
                 try:
                     note.find_tag(tag)

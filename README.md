@@ -52,7 +52,7 @@ change-address <name> <old address> <new address>       |  change address of a c
 remove-address <name> <address>                         |  remove address of a contact 
 ----------------------------------------note------------------------------------------------------------
 show-note <name>                                        |  show a note
-find-note <tags>                                        |  find a note
+find-notes <tags>                                       |  find a note
 add-note <name> <note>                                  |  add a note
 delete-note <name>                                      |  delete a note
 add-tags <name> <tags>                                  |  add tags to a note
