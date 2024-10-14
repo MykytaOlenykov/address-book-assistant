@@ -25,102 +25,64 @@ Windows: `.env/Scripts/activate`
 
 ### Below is a list of possible commands
 
-COMMANDS:
-|----------------------------------------main------------------------------------------------------------|
-|hello                                                   |  greeting                                     |
-|exit                                                    |  exit the program
-|close                                                   |  exit the program
-|help                                                    |  show help information
-|----------------------------------------contacts--------------------------------------------------------|
-all                                                     |  contacts with phones and birthdays
-show-contact <name>                                     |  show a contact
-add-contact <name> <phone>                              |  add a contact and phone number (XXX)-XXX-XXXX
-change-contact <name> <old phone> <new phone>           |  change a contact
-delete-contact <name>                                   |  delete contact/contact number
-----------------------------------------phone number----------------------------------------------------
-show-phone <name>                                       |  show phone of a contact
-remove-phone <name> <phone>                             |  remove phone of a contact
-----------------------------------------email address---------------------------------------------------
-show-email <name>                                       |  show email of a contact
-add-email <name> <email>                                |  add email to a contact
-change-email <name> <old email> <new email>             |  change email in a contact
-remove-email <name> <email>                             |  remove email of a contact
-----------------------------------------address---------------------------------------------------------
-show-address <name>                                     |  show address of a contact
-add-address <name> <address>                            |  add address to a contact
-change-address <name> <old address> <new address>       |  change address of a contact 
-remove-address <name> <address>                         |  remove address of a contact 
-----------------------------------------note------------------------------------------------------------
-show-note <name>                                        |  show a note
-find-notes <tags>                                       |  find a note
-add-note <name> <note>                                  |  add a note
-delete-note <name>                                      |  delete a note
-add-tags <name> <tags>                                  |  add tags to a note
-change-tag <name> <old tag> <new tag>                   |  change a tag of a note
-remove-tags <name> <tags>                               |  remove tags of a note
-----------------------------------------birthday--------------------------------------------------------
-birthdays                                               |  show birthdays for next 7 days
-show-birthday <name>                                    |  show birthday of a contact 
-add-birthday <name> <birthday>                          |  add birthday of a contact 
+### Commands:
 
-### COMMANDS:
+#### Main:
+| Command                   | Description                             |
+|---------------------------|-----------------------------------------|
+| `hello`                   | Greet the user                          |
+| `exit` or `close`         | Exit the program                        |
+| `help`                    | Show help information                   |
 
-#### Main Commands:
-| Команда           | Опис                          |
-|-------------------|-------------------------------|
-| hello             | Привітання                    |
-| exit              | Вихід з програми              |
-| close             | Вихід з програми              |
-| help              | Показати інформацію про допомогу |
+#### Contacts:
+| Command                   | Description                             |
+|---------------------------|-----------------------------------------|
+| `all`                     | List all contacts with phones and birthdays     |
+| `show-contact <name>`     | Show details of a contact               |
+| `add-contact <name> <phone>` | Add a contact with phone number (XXX)-XXX-XXXX |
+| `change-contact <name> <old phone> <new phone>` | Change a contact's phone number  |
+| `delete-contact <name>`   | Delete a contact                        |
 
-#### Команди для контактів:
-| Команда                  | Опис                                          |
-|--------------------------|-----------------------------------------------|
-| all                      | Всі контакти з номерами телефонів та днями народження |
-| show-contact <ім'я>      | Показати контакт                               |
-| add-contact <ім'я> <телефон> | Додати контакт та номер телефону (XXX)-XXX-XXXX |
-| change-contact <ім'я> <старий телефон> <новий телефон> | Змінити контакт |
-| delete-contact <ім'я>    | Видалити контакт або номер телефону           |
+#### Phone Number:
+| Command                   | Description                             |
+|---------------------------|-----------------------------------------|
+| `show-phone <name>`       | Show phone number of a contact          |
+| `remove-phone <name> <phone>` | Remove phone number of a contact     |
 
-#### Команди для номерів телефонів:
-| Команда                | Опис                                          |
-|------------------------|-----------------------------------------------|
-| show-phone <ім'я>       | Показати номер телефону контакту              |
-| remove-phone <ім'я> <телефон> | Видалити номер телефону контакту           |
+#### Email Address:
+| Command                   | Description                             |
+|---------------------------|-----------------------------------------|
+| `show-email <name>`       | Show email address of a contact         |
+| `add-email <name> <email>` | Add email to a contact                 |
+| `change-email <name> <old email> <new email>` | Change a contact's email address |
+| `remove-email <name> <email>` | Remove email of a contact            |
 
-#### Команди для електронної пошти:
-| Команда                | Опис                                          |
-|------------------------|-----------------------------------------------|
-| show-email <ім'я>       | Показати електронну адресу контакту           |
-| add-email <ім'я> <email> | Додати електронну адресу до контакту         |
-| change-email <ім'я> <старий email> <новий email> | Змінити електронну адресу контакту |
-| remove-email <ім'я> <email> | Видалити електронну адресу контакту       |
+#### Address:
+| Command                   | Description                             |
+|---------------------------|-----------------------------------------|
+| `show-address <name>`     | Show address of a contact               |
+| `add-address <name> <address>` | Add address to a contact            |
+| `change-address <name> <old address> <new address>` | Change a contact's address    |
+| `remove-address <name> <address>` | Remove address of a contact       |
 
-#### Команди для адреси:
-| Команда                | Опис                                          |
-|------------------------|-----------------------------------------------|
-| show-address <ім'я>     | Показати адресу контакту                       |
-| add-address <ім'я> <адреса> | Додати адресу до контакту                    |
-| change-address <ім'я> <стара адреса> <нова адреса> | Змінити адресу контакту            |
-| remove-address <ім'я> <адреса> | Видалити адресу контакту                    |
+#### Note:
+| Command                   | Description                             |
+|---------------------------|-----------------------------------------|
+| `show-note <name>`        | Show a note                             |
+| `find-notes <tags>`       | Find notes by tags                      |
+| `add-note <name> <note>`  | Add a new note                          |
+| `delete-note <name>`      | Delete a note                           |
+| `add-tags <name> <tags>`  | Add tags to a note                      |
+| `change-tag <name> <old tag> <new tag>` | Change a tag of a note           |
+| `remove-tags <name> <tags>` | Remove tags from a note               |
 
-#### Команди для нотаток:
-| Команда                | Опис                                          |
-|------------------------|-----------------------------------------------|
-| show-note <ім'я>        | Показати нотатку                               |
-| find-notes <теги>       | Знайти нотатку за тегами                      |
-| add-note <ім'я> <нотатка> | Додати нотатку                                |
-| delete-note <ім'я>      | Видалити нотатку                               |
-| add-tags <ім'я> <теги>  | Додати теги до нотатки                         |
-| change-tag <ім'я> <старий тег> <новий тег> | Змінити тег нотатки                  |
-| remove-tags <ім'я> <теги> | Видалити теги нотатки                        |
+#### Birthday:
+| Command                   | Description                             |
+|---------------------------|-----------------------------------------|
+| `birthdays`               | Show birthdays for the next 7 days       |
+| `show-birthday <name>`    | Show birthday of a contact              |
+| `add-birthday <name> <birthday>` | Add birthday of a contact         |
 
-#### Команди для днів народження:
-| Команда                | Опис                                          |
-|------------------------|-----------------------------------------------|
-| birthdays              | Показати дні народження на наступні 7 днів    |
-| show-birthday <ім'я>   | Показати день народження контакту             |
-| add-birthday <ім'я> <день народження> | Додати день народження контакту   |
 
 
 ### General information
