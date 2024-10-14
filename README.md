@@ -26,12 +26,12 @@ Windows: `.env/Scripts/activate`
 ### Below is a list of possible commands
 
 COMMANDS:
-----------------------------------------main------------------------------------------------------------
-hello                                                   |  greeting
-exit                                                    |  exit the program
-close                                                   |  exit the program
-help                                                    |  show help information
-----------------------------------------contacts--------------------------------------------------------
+|----------------------------------------main------------------------------------------------------------|
+|hello                                                   |  greeting                                     |
+|exit                                                    |  exit the program
+|close                                                   |  exit the program
+|help                                                    |  show help information
+|----------------------------------------contacts--------------------------------------------------------|
 all                                                     |  contacts with phones and birthdays
 show-contact <name>                                     |  show a contact
 add-contact <name> <phone>                              |  add a contact and phone number (XXX)-XXX-XXXX
